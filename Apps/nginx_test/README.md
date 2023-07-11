@@ -1,0 +1,7 @@
+# Nginx
+
+DIGEST:sha256:1bb5c4b86cb7c1e9f0209611dc2135d8a2c1c3a6436163970c99193787d067ea.
+
+---
+
+**WebUI Port:** `80`

@@ -1,0 +1,46 @@
+name: Hello-Nginx
+services:
+  app:
+    image: nginx:1.25
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    x-casaos:
+      envs:
+        - container: PUID
+          description:
+            en_us: for UserID
+        - container: PGID
+          description:
+            en_us: for GroupID
+        - container: TZ
+          description:
+            en_us: specify a timezone to use, see this list.
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/nginx/config
+        target: /config
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: app
+  description:
+    en_us: This container needs special attention.description Hello
+  tagline:
+    en_us: This container needs special attention. Tagline
+  developer: developer
+  author: Hong
+  icon: ''
+  thumbnail: ''
+  title:
+    en_us: Nginx_Test
+  category: Hello
+  port_map: '80'
