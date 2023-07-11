@@ -19,8 +19,8 @@ services:
           description:
             en_us: specify a timezone to use, see this list.
     ports:
-      - target: 80
-        published: 8080
+      - target: 80       #容器端口
+        published: 8080  #公开端口
         protocol: tcp
     volumes:
       - type: bind
