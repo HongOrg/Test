@@ -20,7 +20,7 @@ services:
             en_us: specify a timezone to use, see this list.
     ports:
       - target: 80
-        published: 80
+        published: 8080
         protocol: tcp
     volumes:
       - type: bind
@@ -43,4 +43,4 @@ x-casaos:
   title:
     en_us: Nginx_Test
   category: Hello
-  port_map: '80'
+  port_map: '8080'
